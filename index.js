@@ -150,6 +150,7 @@ app.get("/attendance", async (req, res) => {
 // ================= Start Server =================
 
 const PORT = 3000;
+const port= process.env.PORT || 3000;
 app.get("/debug", async (req, res) => {
     const students = await Student.find();
     res.json(students);
